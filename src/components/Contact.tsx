@@ -10,6 +10,8 @@ import toast from "react-hot-toast";
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.5);
   const messageRef = useRef<any>("");
+  const emailRef = useRef<any>("");
+
   const sectionProps = {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
@@ -21,7 +23,8 @@ export default function Contact() {
   };
 
   const handleFormReset = () => {
-    messageRef.current.value = ""
+    messageRef.current.value = "";
+    emailRef.current.value = "";
   };
 
   return (
@@ -49,7 +52,7 @@ export default function Contact() {
             }
 
             toast.success(`Email sent successfully`);
-            handleFormReset()
+            handleFormReset();
           } catch (error) {
             toast.error("An error occurred. Please try again later.");
           }
@@ -58,6 +61,7 @@ export default function Contact() {
         <input
           type="email"
           name="sender"
+          ref={emailRef}
           maxLength={500}
           placeholder="email"
           required
@@ -77,4 +81,3 @@ export default function Contact() {
     </motion.section>
   );
 }
-

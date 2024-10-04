@@ -42,7 +42,7 @@ export default function Experience() {
               <p className="!font-normal text-gray-500 tracking-normal dark:text-black/90">
                 {item.description}
               </p>
-              <p className="!font-light text-gray-500 dark:text-gray-700">{item.date}</p>
+              <p className="!font-light text-gray-500 dark:text-gray-700">{item.date }</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

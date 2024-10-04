@@ -8,7 +8,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { BorderRight } from "@mui/icons-material";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.2);
@@ -39,7 +38,7 @@ export default function Experience() {
               <h3 className="capitalize !font-medium tracking-wide dark:text-black/80">
                 {item.title}
               </h3>
-              <p className="!font-normal !mt-0 dark:text-black/60">{item.location}</p>
+              <p className="!font-normal !mt-0 dark:text-black/60">{item.company}</p>
               <p className="!font-normal text-gray-500 tracking-normal dark:text-black/90">
                 {item.description}
               </p>

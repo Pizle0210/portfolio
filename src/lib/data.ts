@@ -1,7 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import tmdb from "../../public/tmdb.png";
 import kampalaStore from "../../public/one.png";
 import weatherDataImage from "../../public/weather.png";
 import fashion from "../../public/kam2.png";
@@ -35,8 +34,8 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Tranarc Academy",
-    location: "Ibadan",
+    title: "Student",
+    company: "Tranarc Academy",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer intern.",
     icon: React.createElement(LuGraduationCap),
@@ -44,14 +43,15 @@ export const experiencesData = [
   },
   {
     title: "Frontend Developer Intern",
+    company: "Tranarc Solutions",
     location: "Ibadan",
-    description:
-      "I worked as an intern for a year",
+    description: "I worked as an intern for a year",
     icon: React.createElement(CgWorkAlt),
     date: "2021 - 2022",
   },
   {
-    title: "Junior Fronend Developer Intern",
+    title: "Junior Fronend Developer",
+    company: "Tranarc Solutions",
     location: "Ibadan",
     description: "I work as a frontend developer for 2 years.",
     icon: React.createElement(CgWorkAlt),

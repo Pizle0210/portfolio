@@ -4,6 +4,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import tmdb from "../../public/tmdb.png";
 import kampalaStore from "../../public/one.png";
 import weatherDataImage from "../../public/weather.png";
+import fashion from "../../public/kam2.png";
 
 export const links = [
   {
@@ -34,33 +35,43 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Tranarc bootcamp",
-    location: "Ibadan,Oyo State",
+    title: "Tranarc Academy",
+    location: "Ibadan",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer intern.",
     icon: React.createElement(LuGraduationCap),
-    date: "2022",
+    date: "2021",
   },
   {
-    title: "Front-End Developer Intern",
-    location: "Ibadan,Oyo State",
-    description: "I work as a front-end developer intern for 1 years.",
+    title: "Frontend Developer Intern",
+    location: "Ibadan",
+    description:
+      "I worked as an intern for a year",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 - 2022",
+  },
+  {
+    title: "Junior Fronend Developer Intern",
+    location: "Ibadan",
+    description: "I work as a frontend developer for 2 years.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - ",
   },
 ] as const;
 
+
+// project
 export const projectsData = [
   {
-    title: "TMDB Clone",
-    description: "A TMDB clone",
-    tags: ["React", "Next.js", "Tailwind"],
-    imageUrl: tmdb,
+    title: "K-Fashion Store",
+    description: "A Mini e-commerce web fashion store.",
+    tags: ["Sanity", "React", "Next.js", "Tailwind"],
+    imageUrl: fashion,
   },
   {
     title: "Weather App",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "A responsive web app built with React and Next.js that provides real-time weather updates.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: weatherDataImage,
   },
@@ -72,6 +83,8 @@ export const projectsData = [
   },
 ] as const;
 
+
+// skills
 export const skillsData = [
   "HTML",
   "CSS",
@@ -85,5 +98,6 @@ export const skillsData = [
   "MongoDB",
   "Redux",
   "Express",
+  "Linux",
   "Framer Motion",
 ] as const;

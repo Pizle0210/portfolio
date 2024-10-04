@@ -1,14 +1,15 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Headings from "./Headings";
 import { useSectionInView } from "@/hooks/useSection";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { sendEmail } from "../actions/sendEmails";
 import SubmitButton from "./SubmitButton";
 import toast from "react-hot-toast";
+
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.5);
+  const messageRef = useRef<any>("");
   const sectionProps = {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
@@ -18,6 +19,11 @@ export default function Contact() {
     id: "contact",
     className: "scroll-mt-28 mb-28 sm:mb-40 w-[min(100%,36rem)]",
   };
+
+  const handleFormReset = () => {
+    messageRef.current.value = ""
+  };
+
   return (
     <motion.section {...sectionProps}>
       <Headings>Contact</Headings>
@@ -34,12 +40,19 @@ export default function Contact() {
       <form
         className="flex flex-col space-y-5 group"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          if (error) {
-            toast.error(error);
-            return;
+          try {
+            const { data, error } = await sendEmail(formData);
+
+            if (error) {
+              toast.error(error);
+              return;
+            }
+
+            toast.success(`Email sent successfully`);
+            handleFormReset()
+          } catch (error) {
+            toast.error("An error occurred. Please try again later.");
           }
-          return toast.success(`Email sent successfully`);
         }}
       >
         <input
@@ -51,6 +64,7 @@ export default function Contact() {
           className="rounded-md outline-none dark:text-black  focus:outline-none focus:border-0 focus:ring-1 focus:ring-gray-500"
         />
         <textarea
+          ref={messageRef}
           name="message"
           required
           maxLength={3000}
@@ -63,3 +77,4 @@ export default function Contact() {
     </motion.section>
   );
 }
+

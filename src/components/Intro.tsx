@@ -88,10 +88,10 @@ export default function Intro() {
             className="gap-2 group bg-purple-800/70 font-medium text-white/90 rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 hover:bg-purple-800/80 hover:text-white transition ease-in-out"
           >
             Contact me here
-            <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition" />
+            <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition"/>
           </Link>
           <a
-            href="/DOLAPO.pdf"
+            href="/cv_dolapo.pdf"
             download={true}
             className="gap-2 group bg-white font-normal text-black rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 transition ease-in-out "
           >

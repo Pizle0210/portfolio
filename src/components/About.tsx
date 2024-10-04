@@ -20,12 +20,10 @@ export default function About() {
       <Headings>About me</Headings>
       <div className="space-y-8">
         <p className="text-[clamp(1rem,2vw,1.3rem)] !leading-[1.9rem] dark:text-white">
-          With a background in{" "}
-          <span className="italic font-semibold">Agricultural Science</span> and
-          a passion for technology, I've embarked on a journey to become a
+          With a passion for technology, I've embarked on a journey to become a
           skilled{" "}
           <span className="font-semibold italic">front-end developer</span>.
-          Over the past two years, I've dedicated myself to mastering the art of
+          Over the past three years, I've dedicated myself to mastering the art of
           web development, honing my skills and crafting immersive digital
           experiences along the way. Driven by a curiosity for how things work
           and a desire to create meaningful solutions, I've immersed myself in

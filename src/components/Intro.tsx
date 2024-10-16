@@ -59,8 +59,8 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-[clamp(1.3rem,2vw,1.9rem)] !leading-[2.5rem]"
         >
-          Hello there, I'm Dolapo and welcome to my corner of the web!. With two
-          years of dedicated learning and experience in{" "}
+          Hello there, I'm Ade and welcome to my corner of the web!. With over
+          three years of dedicated learning and experience in{" "}
           <span className="font-bold italic">front-end development</span>. My
           main expertise lies in{" "}
           <span className="italic underline font-semibold">
@@ -88,10 +88,10 @@ export default function Intro() {
             className="gap-2 group bg-purple-800/70 font-medium text-white/90 rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 hover:bg-purple-800/80 hover:text-white transition ease-in-out"
           >
             Contact me here
-            <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition"/>
+            <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition" />
           </Link>
           <a
-            href="/cv_dolapo.pdf"
+            href="/Ade_Faj_Frontend_Developer.pdf"
             download={true}
             className="gap-2 group bg-white font-normal text-black rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 transition ease-in-out "
           >

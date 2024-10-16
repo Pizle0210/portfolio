@@ -11,7 +11,7 @@ export default function SubmitButton() {
       disabled={pending}
     >
       {pending ? (
-        <div className="animate-spin h-5 w-5 rounded-full border-b-2 border-white"></div>
+        <div className="animate-spin h-5 w-5 dark:bg-black rounded-full border-b-2 border-t-2 border-white"></div>
       ) : (
         <>
           Submit

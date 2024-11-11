@@ -59,7 +59,7 @@ export const experiencesData = [
   },
 ] as const;
 
-
+// project
 // project
 export const projectsData = [
   {
@@ -82,7 +82,6 @@ export const projectsData = [
     imageUrl: kampalaStore,
   },
 ] as const;
-
 
 // skills
 export const skillsData = [

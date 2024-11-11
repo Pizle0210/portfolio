@@ -13,7 +13,7 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActive, setTimeOfLastClick } = useActiveSectionContext();
   const linkedinUrl = process.env.LINKEDIN;
-  const GithubUrl = process.env.GITHUB;
+  const githubUrl = process.env.GITHUB;
   return (
     <section
       className=" space-y-10 sm:space-y-12 max-w-[50rem] mb-4 scroll-mt-[150rem]"
@@ -59,8 +59,8 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-[clamp(1.3rem,2vw,1.9rem)] !leading-[2.5rem]"
         >
-          Hello there, I'm Ade and welcome to my corner of the web!. With over
-          three years of dedicated learning and experience in{" "}
+          Hello there, I'm Dolapo and welcome to my corner of the web!. With
+          over three years of dedicated learning and experience in{" "}
           <span className="font-bold italic">front-end development</span>. My
           main expertise lies in{" "}
           <span className="italic underline font-semibold">
@@ -91,7 +91,7 @@ export default function Intro() {
             <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition" />
           </Link>
           <a
-            href="/Ade_Faj_Frontend_Developer.pdf"
+            href="/Adedolpo_cv(ng).pdf"
             download={true}
             className="gap-2 group bg-white font-normal text-black rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 transition ease-in-out "
           >
@@ -99,7 +99,7 @@ export default function Intro() {
             <FileDownloadIcon className="h-6 w-6 font-extralight text-gray-700 group-hover:translate-y-[0.2rem]" />
           </a>
           <a
-            href="https://github.com/Pizle0210"
+            href={githubUrl}
             target="_blank"
             className="bg-white p-1 border border-black/10 rounded-full transition outline-none focus:scale-105 hover:scale-105 active:scale-110 ease-in-out"
           >

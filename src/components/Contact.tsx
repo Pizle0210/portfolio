@@ -36,7 +36,7 @@ export default function Contact() {
           href="mailto:ade_fs@outlook.com"
           className="cursor-pointer hover:underline text-gray-800 dark:text-slate-50 dark:hover:text-slate-200 hover:text-gray-800/70"
         >
-          ade_fs@outlook.com
+          fajobiadedoyin@hotmail.com
         </a>{" "}
         or through this form below.
       </p>

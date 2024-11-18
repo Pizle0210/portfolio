@@ -105,13 +105,6 @@ export default function Intro() {
           >
             <GitHubIcon className="h-6 w-6 sm:h-8 sm:w-8 rounded-full text-slate-600 " />
           </a>
-          <a
-            href={linkedinUrl}
-            target="_blank"
-            className="bg-white p-1 border border-black/10 rounded-full transition outline-none focus:scale-105 hover:scale-105 active:scale-110 ease-in-out"
-          >
-            <LinkedInIcon className="h-6 w-6 sm:h-8 sm:w-8 rounded-full text-blue-600 outline-none focus:scale-105 hover:scale-105 active:scale-110 transition ease-in-out" />
-          </a>
         </motion.div>
       </div>
     </section>

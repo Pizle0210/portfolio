@@ -23,7 +23,7 @@ export default function About() {
           With a passion for technology, I've embarked on a journey to become a
           skilled{" "}
           <span className="font-semibold italic">front-end developer</span>.
-          Over the past three years, I've dedicated myself to mastering the art
+          Over the past four years, I've dedicated myself to mastering the art
           of web development, honing my skills and crafting immersive digital
           experiences along the way. Driven by a curiosity for how things work
           and a desire to create meaningful solutions, I've immersed myself in

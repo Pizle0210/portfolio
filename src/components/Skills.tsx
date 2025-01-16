@@ -22,7 +22,7 @@ const Skills = () => {
       className="max-w-[50rem] scroll-mt-28 mb-40 text-center"
     >
       <Headings>My Skills</Headings>
-      <ul className="flex items-center flex-wrap justify-center text-slate-600 sm:text-lg gap-5">
+      <ul className="flex items-center flex-wrap justify-center text-slate-600 sm:text-lg gap-2 md:gap-5">
         {skillsData.map((skill, idx) => (
           <motion.li
             variants={fadeInAnimationVariants}

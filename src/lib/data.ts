@@ -4,6 +4,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import kampalaStore from "../../public/one.png";
 import weatherDataImage from "../../public/weather.png";
 import fashion from "../../public/kam2.png";
+import chat from "../../public/chatApp.png";
+import spotixImg from "../../public/spot1.png";
 
 export const links = [
   {
@@ -63,24 +65,35 @@ export const experiencesData = [
 // project
 export const projectsData = [
   {
+    title: "Spotix",
+    description:
+      "Spotix is an event ticketing application for discovering, purchasing, and managing event tickets. Built with Next.js and powered by Convex DB, the app ensures real-time updates. It features a robust queuing system to manage high-demand ticket sales effectively.",
+    tags: ["Next.js", "Tailwind", "Convex", "Stripe"],
+    imageUrl: spotixImg,
+    url: "https://spotix-chi.vercel.app/"
+  },
+  {
+    title: "chatApp",
+    description:
+      "An interactive chat application designed for seamless communication between users in real time. Built with React and Tailwind CSS for modern design and responsiveness, it integrates advanced features such as file sharing, and customizable themes.",
+    tags: ["Mongodb", "express", "React", "Tailwind", "Zustand", "Socket.IO"],
+    imageUrl: chat,
+    url: "https://chat-app-oc0r.onrender.com/"
+  },
+  {
     title: "K-Fashion Store",
     description: "A Mini e-commerce web fashion store.",
     tags: ["Sanity", "React", "Next.js", "Tailwind"],
     imageUrl: fashion,
-  },
-  {
-    title: "Weather App",
-    description:
-      "A responsive web app built with React and Next.js that provides real-time weather updates.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: weatherDataImage,
+    url: "https://kampala-e-commerce.vercel.app/"
   },
   {
     title: "Kampala Store",
     description: "A Mini e-commerce web to shop gadgets.",
     tags: ["Mongodb", "express", "React", "Nodejs", "Tailwind", "redux"],
     imageUrl: kampalaStore,
-  },
+    url: "https://kampala.onrender.com"
+  }
 ] as const;
 
 // skills

@@ -52,7 +52,7 @@ export const experiencesData = [
     date: "2021 - 2022",
   },
   {
-    title: "Junior Fronend Developer",
+    title: "Frontend Developer",
     company: "Tranarc Solutions",
     location: "Ibadan",
     description: "I work as a frontend developer for 2 years.",

@@ -60,7 +60,7 @@ export default function Intro() {
           className="text-center text-[clamp(1.3rem,2vw,1.9rem)] !leading-[2.5rem]"
         >
           Hello there, I'm Dolapo and welcome to my corner of the web!. With
-          over three years of dedicated learning and experience in{" "}
+          over four years of dedicated learning and experience in{" "}
           <span className="font-bold italic">front-end development</span>. My
           main expertise lies in{" "}
           <span className="italic underline font-semibold">

@@ -91,7 +91,7 @@ export default function Intro() {
             <ArrowForwardIcon className="opacity-60 group-hover:translate-x-1 group-hover:opacity-100 transition" />
           </Link>
           <a
-            href="/myCv.pdf"
+            href="/dolapo_fajobi_cv.pdf"
             download={true}
             className="gap-2 group bg-white font-normal text-black rounded-full p-2 px-2 sm:px-4 outline-none focus:scale-105 hover:scale-105 active:scale-110 transition ease-in-out "
           >

@@ -2,10 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import kampalaStore from "../../public/one.png";
-import weatherDataImage from "../../public/weather.png";
 import fashion from "../../public/kam2.png";
 import chat from "../../public/chatApp.png";
 import spotixImg from "../../public/spot1.png";
+import syntax from "../../public/syntax.png";
 
 export const links = [
   {
@@ -54,8 +54,22 @@ export const experiencesData = [
 ] as const;
 
 // project
-// project
 export const projectsData = [
+  {
+    title: "Syntax Studio",
+    description:
+      "An Interactive Code Editor for Practicing Coding Skills built for developers.",
+    tags: [
+      "Next.js",
+      "React",
+      "Convex",
+      "Zustand",
+      "Framer Motion",
+      "Tailwind"
+    ],
+    imageUrl: syntax,
+    url: "https://syntax-studio-rho.vercel.app/"
+  },
   {
     title: "Spotix",
     description:

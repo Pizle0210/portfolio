@@ -48,6 +48,8 @@ export default function Project({
         src={imageUrl}
         alt={title}
         quality={100}
+        height={300}
+        width={400}
         priority
         className="hidden sm:block absolute top-10 -right-44 w-[33.25rem] rounded-t-lg shadow-2xl  group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.08] transition"
       />

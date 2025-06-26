@@ -1,11 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import kampalaStore from "../../public/one.png";
-import fashion from "../../public/kam2.png";
-import chat from "../../public/chatApp.png";
-import spotixImg from "../../public/spot1.png";
-import syntax from "../../public/syntax.png";
 
 export const links = [
   {
@@ -67,7 +62,7 @@ export const projectsData = [
       "Framer Motion",
       "Tailwind"
     ],
-    imageUrl: syntax,
+    imageUrl: "/syntax.png",
     url: "https://syntax-studio-rho.vercel.app/"
   },
   {
@@ -75,7 +70,7 @@ export const projectsData = [
     description:
       "Spotix is an event ticketing application for discovering, purchasing, and managing event tickets. Built with Next.js and powered by Convex DB, the app ensures real-time updates. It features a robust queuing system to manage high-demand ticket sales effectively.",
     tags: ["Next.js", "Tailwind", "Convex", "Stripe"],
-    imageUrl: spotixImg,
+    imageUrl: "/spotix.png",
     url: "https://spotix-chi.vercel.app/"
   },
   {
@@ -83,21 +78,21 @@ export const projectsData = [
     description:
       "An interactive chat application designed for seamless communication between users in real time. Built with React and Tailwind CSS for modern design and responsiveness, it integrates advanced features such as file sharing, and customizable themes.",
     tags: ["Mongodb", "express", "React", "Tailwind", "Zustand", "Socket.IO"],
-    imageUrl: chat,
+    imageUrl: "/chatApp.png",
     url: "https://chat-app-oc0r.onrender.com/"
   },
   {
     title: "K-Fashion Store",
     description: "A Mini e-commerce web fashion store.",
     tags: ["Sanity", "React", "Next.js", "Tailwind"],
-    imageUrl: fashion,
+    imageUrl: "/fashion.png",
     url: "https://kampala-e-commerce.vercel.app/"
   },
   {
     title: "Kampala Store",
     description: "A Mini e-commerce web to shop gadgets.",
     tags: ["Mongodb", "express", "React", "Nodejs", "Tailwind", "redux"],
-    imageUrl: kampalaStore,
+    imageUrl: "/kampala.png",
     url: "https://kampala.onrender.com"
   }
 ] as const;

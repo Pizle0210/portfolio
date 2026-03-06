@@ -13,13 +13,13 @@ import MagneticButton from "./MagneticButton";
 export default function Hero() {
   const { ref } = useSectionInView("Home", 0.5);
   const containerRef = useRef<HTMLElement>(null);
-  
+
   // Create parallax for the background geometric shapes
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
   });
-  
+
   // The shapes will move down slower than the page scrolls
   const yParallax = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   // The content will fade out and scale down slightly as it scrolls away
@@ -39,14 +39,14 @@ export default function Hero() {
       className="relative mb-28 max-w-200 text-center sm:mb-0 scroll-mt-400 min-h-screen flex flex-col justify-center items-center mx-auto px-4 w-full"
     >
       {/* Attach parallax to the background scene */}
-      <motion.div 
-        style={{ y: yParallax }} 
+      <motion.div
+        style={{ y: yParallax }}
         className="absolute inset-0 -z-10 pointer-events-none"
       >
         <ShapesScene />
       </motion.div>
 
-      <motion.div 
+      <motion.div
         style={{ opacity: opacityParallax, scale: scaleParallax }}
         className="flex flex-col items-center justify-center relative z-10"
       >
@@ -54,10 +54,15 @@ export default function Hero() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 125, delay: 0.1, duration: 0.7 }}
+            transition={{
+              type: "spring",
+              stiffness: 125,
+              delay: 0.1,
+              duration: 0.7,
+            }}
             className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center border border-accent/30 shadow-glow"
           >
-            <span className="text-4xl font-bold text-accent">AF</span>
+            <span className="text-4xl font-bold text-accent">DF</span>
           </motion.div>
         </div>
 
@@ -68,7 +73,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="block text-text-primary">Dolapo Fajobi</span>
-          <span className="block text-gradient mt-2 py-2">Software Engineer</span>
+          <span className="block text-gradient mt-2 py-2">
+            Software Engineer
+          </span>
         </motion.h1>
 
         <motion.p
@@ -77,7 +84,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Building scalable, high-performance web applications with React, Next.js, and Python. Passionate about beautiful interfaces and robust system architecture.
+          Building scalable, high-performance web applications with React,
+          Next.js, and Python. Passionate about beautiful interfaces and robust
+          system architecture.
         </motion.p>
       </motion.div>
 
@@ -112,7 +121,7 @@ export default function Hero() {
           <MagneticButton>
             <a
               className="glass-panel p-4 text-text-secondary flex items-center gap-2 rounded-full outline-none transition hover:text-text-primary hover:bg-text-primary/10 hover:scale-110 active:scale-95"
-              href="https://linkedin.com/in/ade-fs"
+              href="https://linkedin.com/in/dolapo-faj0210"
               target="_blank"
             >
               <BsLinkedin size={20} />

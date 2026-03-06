@@ -1,52 +1,54 @@
 "use client";
+
 import React from "react";
-import Headings from "./Headings";
 import { experiencesData } from "@/lib/data";
-import { useSectionInView } from "@/hooks/useSection";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import { motion } from "framer-motion";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.2);
-
+  const { ref } = useSectionInView("Experience", 0.3);
   return (
-    <section
-      className="max-w-[40rem] scroll-mt-28 space-y-20 mb-[8rem]"
-      id="experience"
-      ref={ref}
-    >
-      <Headings>Experience</Headings>
-      <VerticalTimeline lineColor="#e5e7eb">
+    <section ref={ref} id="experience" className="mb-28 max-w-200 sm:mb-40 scroll-mt-28 mx-auto w-full px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl mb-4">Professional Experience</h2>
+        <p className="text-text-secondary">A timeline of my career journey so far.</p>
+      </motion.div>
+
+      <div className="relative border-l border-text-primary/10 ml-3 md:ml-6 space-y-12">
         {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              visible={true}
-              icon={item.icon}
-              iconStyle={{ background: "white", color: "black", fontSize: "1.5rem" }}
-              contentStyle={{
-                boxShadow: "none",
-                textAlign: "left",
-                padding: "1.5rem 1.2rem",
-                background: "#f4f3f6",
-                marginInline: "-2rem",
-              }}
-              contentArrowStyle={{ borderRight: "0.5rem solid #9ca3af" }}
-            >
-              <h3 className="capitalize !font-medium tracking-wide dark:text-black/80">
-                {item.title}
-              </h3>
-              <p className="!font-normal !mt-0 dark:text-black/60">{item.company}</p>
-              <p className="!font-normal text-gray-500 tracking-normal dark:text-black/90">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            className="relative pl-8 md:pl-12"
+          >
+            <span className="absolute -left-1.25 top-1 w-2.5 h-2.5 rounded-full bg-accent ring-4 ring-bg-main" />
+            
+            <div className="glass-panel p-6 rounded-2xl hover:bg-text-primary/5 transition duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-1">{item.title}</h3>
+                  <p className="text-text-secondary text-sm font-medium">{item.company} • {item.location}</p>
+                </div>
+                <span className="px-3 py-1 bg-text-primary/10 text-text-primary text-xs font-semibold rounded-full whitespace-nowrap self-start">
+                  {item.date}
+                </span>
+              </div>
+              <p className="text-text-secondary leading-relaxed font-light text-[0.95rem]">
                 {item.description}
               </p>
-              <p className="!font-light text-gray-500 dark:text-gray-700">{item.date }</p>
-            </VerticalTimelineElement>
-          </React.Fragment>
+            </div>
+          </motion.div>
         ))}
-      </VerticalTimeline>
+      </div>
     </section>
   );
 }

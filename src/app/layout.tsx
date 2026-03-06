@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { twMerge } from "tailwind-merge";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ActiveSectionContextProvider from "@/providers/active-section-context";
-import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "@/providers/theme-provider";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import CustomCursor from "@/components/CustomCursor";
+import LoadingScreen from "@/components/LoadingScreen";
 
-const poppins = Poppins({ subsets: ["latin"],weight:'400' });
+import { Toaster } from "react-hot-toast";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dolapo Fajobi Portfolio",
-  description: "Frontend Developer",
+  title: "Dolapo Fajobi | Software Engineer",
+  description: "Portfolio of Dolapo Fajobi, Software Engineer.",
 };
 
 export default function RootLayout({
@@ -21,24 +22,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth dark">
-      <body
-        className={twMerge(
-          `flex flex-col relative justify-between bg-gray-50 dark:bg-gray-900 dark:text-white dark:text-opacity-90 text-slate-950 pt-32 sm:pt-36`,
-          poppins.className
-        )}
-      >
-        <div className="bg-[#e2e4fb] dark:bg-[#442121] -z-10 absolute top-[-6rem] dark:top-[-12rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-[#dbd7fb] dark:bg-[#0e3b62] -z-10 absolute top-[-1rem] dark:top-[-12rem] left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-        <ActiveSectionContextProvider>
-          <Header />
-          <main className="min-h-screen px-12 sm:px-5 flex justify-center flex-col items-center container mx-auto">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} bg-bg-main text-text-primary antialiased min-h-screen relative overflow-x-hidden transition-colors duration-300`}>
+        <ThemeProvider>
+          <ActiveSectionContextProvider>
+            <LoadingScreen />
+            <CustomCursor />
+            <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+            {/* Ambient background glow */}
+            <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/5 blur-[120px] -z-10 pointer-events-none" />
+            <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent/5 blur-[120px] -z-10 pointer-events-none" />
+            
             {children}
-          </main>
-          <Footer />
-          <Toaster position="bottom-right" />
-        </ActiveSectionContextProvider>{" "}
-        <ThemeSwitch />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

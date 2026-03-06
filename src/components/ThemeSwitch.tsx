@@ -1,48 +1,27 @@
 "use client";
+
+import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-type Theme = "light" | "dark";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("light");
-    }
+    setMounted(true);
   }, []);
+
+  if (!mounted) return <div className="fixed bottom-5 right-5 w-12 h-12" />;
 
   return (
     <button
-      onClick={toggleTheme}
-      className="transition-all fixed bottom-16 right-6 rounded-full w-7 h-7 dark:bg-white bg-purple-100 items-center flex p-6 justify-center backdrop-blur-[0.5rem] border border-white hover:scale-[1.10] active:scale-125 cursor-pointer"
+      className="fixed bottom-5 right-5 bg-bg-surface w-12 h-12 bg-opacity-80 backdrop-blur-sm border border-white/10 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all text-text-primary z-50 hover:bg-bg-surface-hover"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      aria-label="Toggle Theme"
+      title="Toggle Theme"
     >
-      {theme === "light" ? (
-        <LightModeOutlinedIcon className="text-black" />
-      ) : (
-        <DarkModeOutlinedIcon className="text-black" />
-      )}
+      {theme === "light" ? <BsSun size={20} /> : <BsMoon size={20} />}
     </button>
   );
 }

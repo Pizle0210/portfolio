@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
   {
@@ -12,16 +11,16 @@ export const links = [
     hash: "#about",
   },
   {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
     name: "Projects",
     hash: "#projects",
   },
   {
     name: "Skills",
     hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
   },
   {
     name: "Contact",
@@ -31,70 +30,84 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Student",
-    company: "Tranarc Academy",
+    title: "Front-End Developer",
+    company: "Freelance",
+    location: "Remote",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2021",
+      "Engineered high-performance web applications tailored to specific business requirements, delivering bespoke digital solutions for a diverse portfolio of clients. Championed scalable frontend architecture utilizing React and TypeScript.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Aug 2024 - Present",
   },
   {
     title: "Frontend Developer",
     company: "Tranarc Solutions",
-    location: "Ibadan",
-    description: "I have been working as a frontend developer for over 3 years.",
+    location: "On-site",
+    description:
+      "Led the comprehensive overhaul of legacy systems into a modern React-based stack, orchestrating a complete digital transformation that modernized the entire user interface and core application layer.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - ",
+    date: "2022 - Aug 2024",
+  },
+  {
+    title: "Student",
+    company: "Tranarc Academy",
+    location: "On-site",
+    description:
+      "Graduated after 6 months of intensive study. I immediately transitioned into a front-end developer role.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021",
   },
 ] as const;
 
 // project
 export const projectsData = [
   {
+    title: "AI Job Application Assistant",
+    description:
+      "An AI Job Application Assistant that helps you apply for jobs with ease.",
+    fullDescription:
+      "A comprehensive platform that streamlines the job application process. Users can generate highly tailored cover letters leveraging OpenAI's Models, manage auto-populated job applications, and receive dynamic market insights to adjust their strategy.",
+    tags: [
+      "Next.js",
+      "React",
+      "AI",
+      "Supabase",
+      "PostgreSQL",
+      "Framer Motion",
+      "Tailwind",
+    ],
+    imageUrl: "/ai-assistant.png",
+    url: "https://ai-job-application-assistant-v1.vercel.app/",
+    github: "https://github.com",
+  },
+  {
     title: "Syntax Studio",
     description:
       "An Interactive Code Editor for Practicing Coding Skills built for developers.",
+    fullDescription:
+      "Syntax Studio is an interactive, browser-based code editing environment. It features real-time syntax highlighting, live execution feedback, and customizable themes, allowing developers of all levels to practice and refine their algorithms directly in the browser.",
     tags: [
       "Next.js",
       "React",
       "Convex",
       "Zustand",
       "Framer Motion",
-      "Tailwind"
+      "Tailwind",
     ],
     imageUrl: "/syntax.png",
-    url: "https://syntax-studio-rho.vercel.app/"
+    url: "https://syntax-studio-rho.vercel.app/",
+    github: "https://github.com",
   },
   {
     title: "Spotix",
     description:
-      "Spotix is an event ticketing application for discovering, purchasing, and managing event tickets. Built with Next.js and powered by Convex DB, the app ensures real-time updates. It features a robust queuing system to manage high-demand ticket sales effectively.",
+      "Spotix is an event ticketing application for discovering, purchasing, and managing event tickets.",
+    fullDescription:
+      "Built with Next.js and powered by Convex DB, the app ensures real-time updates. It features a robust queuing system to manage high-demand ticket sales effectively and integrates Stripe for seamless payment processing.",
     tags: ["Next.js", "Tailwind", "Convex", "Stripe"],
     imageUrl: "/spotix.png",
-    url: "https://spotix-chi.vercel.app/"
+    url: "https://spotix-chi.vercel.app/",
+    github: "https://github.com",
   },
-  {
-    title: "chatApp",
-    description:
-      "An interactive chat application designed for seamless communication between users in real time. Built with React and Tailwind CSS for modern design and responsiveness, it integrates advanced features such as file sharing, and customizable themes.",
-    tags: ["Mongodb", "express", "React", "Tailwind", "Zustand", "Socket.IO"],
-    imageUrl: "/chatApp.png",
-    url: "https://chat-app-oc0r.onrender.com/"
-  },
-  {
-    title: "K-Fashion Store",
-    description: "A Mini e-commerce web fashion store.",
-    tags: ["Sanity", "React", "Next.js", "Tailwind"],
-    imageUrl: "/fashion.png",
-    url: "https://kampala-e-commerce.vercel.app/"
-  },
-  {
-    title: "Kampala Store",
-    description: "A Mini e-commerce web to shop gadgets.",
-    tags: ["Mongodb", "express", "React", "Nodejs", "Tailwind", "redux"],
-    imageUrl: "/kampala.png",
-    url: "https://kampala.onrender.com"
-  }
 ] as const;
 
 // skills
@@ -102,16 +115,16 @@ export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
   "React",
   "Next.js",
-  "Astro",
-  "Node.js",
   "Git",
   "Tailwind",
-  "MongoDB",
+  "TypeScript",
+  "Astro",
+  "Node.js",
+  "Python",
   "Redux",
-  "Express",
+  "Zustand",
   "Linux",
   "Framer Motion",
 ] as const;

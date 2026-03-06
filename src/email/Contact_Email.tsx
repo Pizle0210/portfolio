@@ -24,8 +24,8 @@ export default function Contact_Email({ message,senderEmail }: ContactEmailProps
         <Body className="">
           <Container className="bg-white">
             <Section className="">
-              <Heading className="text-blue-500 text-xl">Congratulations!!. You got a job</Heading>
-              <Text className="text-neutral-300">{message}</Text>
+              <Heading className="text-black font-sans text-lg">Congratulations!!. You got a job</Heading>
+              <Text className="text-neutral-800">{message}</Text>
               <Hr />
               <Text>Sender: {senderEmail}</Text>
             </Section>

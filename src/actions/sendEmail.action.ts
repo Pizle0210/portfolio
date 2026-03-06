@@ -4,10 +4,7 @@ import { Resend } from "resend";
 import React from "react";
 import Contact_Email from "@/email/Contact_Email";
 
-// Use a fallback dummy key during development if .env.local hasn't loaded yet
-const resend = new Resend(
-  process.env.RESEND_API_KEY || "re_dummy_fallback_key",
-);
+const resend = new Resend(process.env.RESEND_API);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail") as string;
@@ -30,7 +27,7 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   try {
-    const data = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "fajobiadedoyin@hotmail.com",
       subject: "Message from Portfolio Contact Form",
@@ -40,6 +37,10 @@ export const sendEmail = async (formData: FormData) => {
         senderEmail: senderEmail,
       }),
     });
+
+    if (error) {
+      return { error: error.message };
+    }
 
     return {
       data,

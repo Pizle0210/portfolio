@@ -75,7 +75,7 @@ export const projectsData = [
       "Framer Motion",
       "Tailwind",
     ],
-    imageUrl: "/ai-assistant.png",
+    imageUrl: "/ai-job.png",
     url: "https://ai-job-application-assistant-v1.vercel.app/",
     github: "https://github.com",
   },
